@@ -32,7 +32,7 @@ function SignIn() {
               appId="1430925715384725"
               autoLoad={false}
               fields="name,email,picture"
-              scope="public_profile,user_friends"
+              scope="public_profile,email"
               callback={responseFacebook}
               icon="fa-facebook"
             />
