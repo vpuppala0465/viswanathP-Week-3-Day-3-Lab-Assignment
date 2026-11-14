@@ -4,9 +4,10 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DisplayProducts from "./displayProducts";
 import Cart from "./cart";
+import SignIn from "./signin";
 
 function Navbar(props) {
-  const totalItems = props.products
+  const totalValue = props.products
     .map((product) => product.value)
     .reduce((total, value) => total + value, 0);
 
@@ -18,7 +19,7 @@ function Navbar(props) {
         </Link>
         <Link to="/cart" className="cart-total">
           <FontAwesomeIcon icon={faShoppingCart} className="mr-3" />
-          {totalItems} items
+          {totalValue} items
         </Link>
       </div>
 
@@ -33,7 +34,11 @@ function Navbar(props) {
             />
           }
         />
-        <Route path="/cart" element={<Cart products={props.products} />} />
+        <Route
+          path="/cart"
+          element={<Cart products={props.products} totalValue={totalValue} />}
+        />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </Router>
   );

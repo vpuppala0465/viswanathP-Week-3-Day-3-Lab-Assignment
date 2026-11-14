@@ -91,3 +91,27 @@
   font-size: 0.75rem;
   font-weight: 600;
 }
+
+.cart-empty {
+  font-size: 0.8rem;
+}
+
+.signin .card-header h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.signin .card-body h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.signin form {
+  width: 200px;
+  font-size: 0.75rem;
+}
+
+.signin form input[type="text"],
+.signin form input[type="email"] {
+  width: 150px;
+}
